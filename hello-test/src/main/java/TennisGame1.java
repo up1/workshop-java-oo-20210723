@@ -21,7 +21,6 @@ public class TennisGame1 {
 
     public String getScore() {
         String[] scoreResults = new String[]{"Love", "Fifteen", "Thirty", "Forty"};
-        StringBuilder score = new StringBuilder();
         // All
         if (isAll()) {
             return scoreResults[m_score1] + "-" + "All";
@@ -35,6 +34,7 @@ public class TennisGame1 {
 
         // ???? Advantage and Win ????
         if (m_score1 >= 4 || m_score2 >= 4) {
+            StringBuilder score = new StringBuilder();
             int minusResult = m_score1 - m_score2;
             if (minusResult == 1) score = new StringBuilder("Advantage ").append(this.player1Name);
             else if (minusResult == -1) score = new StringBuilder("Advantage ").append(this.player2Name);
@@ -44,8 +44,7 @@ public class TennisGame1 {
         }
 
         // Normal game
-        score.append(scoreResults[m_score1]).append("-").append(scoreResults[m_score2]);
-        return score.toString();
+        return scoreResults[m_score1] + "-" + scoreResults[m_score2];
     }
 
     private boolean isDeuce() {
