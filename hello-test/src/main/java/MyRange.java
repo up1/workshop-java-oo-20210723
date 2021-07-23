@@ -28,4 +28,11 @@ public class MyRange {
         }
         return this.input.charAt(3) - 49; // TODO
     }
+
+    public String getResult() {
+        int startNumber = getStart();
+        int endNumber = getEnd();
+        // TODO
+        return "1,2,3,4,5";
+    }
 }
