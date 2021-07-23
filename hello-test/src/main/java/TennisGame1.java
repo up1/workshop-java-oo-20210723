@@ -46,15 +46,7 @@ public class TennisGame1 {
             else if (minusResult >= 2) score = new StringBuilder("Win for ").append(this.player1Name);
             else score = new StringBuilder("Win for ").append(this.player2Name);
         } else {
-            for (int i = 1; i < 3; i++) {
-                if (i == 1) {
-                    tempScore = m_score1;
-                } else {
-                    score.append("-");
-                    tempScore = m_score2;
-                }
-                score.append(scoreResults[tempScore]);
-            }
+            score.append(scoreResults[m_score1]).append("-").append(scoreResults[m_score2]);
         }
         return score.toString();
     }
