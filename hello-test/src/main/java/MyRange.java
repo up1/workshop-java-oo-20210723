@@ -17,4 +17,8 @@ public class MyRange {
         }
         return this.input.charAt(1) - 47;
     }
+
+    public boolean isEndWithInclude() {
+        return this.input.endsWith("]");
+    }
 }
