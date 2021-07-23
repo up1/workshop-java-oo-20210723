@@ -15,6 +15,6 @@ public class MyRange {
             return this.input.charAt(1) - ASCII_VALUE_OF_1;
 //        return Integer.parseInt(String.valueOf(this.input.charAt(1)));
         }
-        return -1; // TODO
+        return this.input.charAt(1) - 47;
     }
 }

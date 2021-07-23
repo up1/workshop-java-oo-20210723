@@ -6,6 +6,13 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MyRangeTest {
 
     @Test
+    public void startNumberWithExclude() {
+        MyRange myRange = new MyRange("(1,5]");
+        int result = myRange.getStart();
+        assertEquals(2, result);
+    }
+
+    @Test
     public void startNumberWithInclude() {
         MyRange myRange = new MyRange("[1,5]");
         int result = myRange.getStart();
