@@ -20,18 +20,19 @@ public class TennisGame1 {
     }
 
     public String getScore() {
+        String[] scoreResults = new String[]{"Love", "Fifteen", "Thirty", "Forty" };
         StringBuilder score = new StringBuilder();
         int tempScore;
         if (m_score1 == m_score2) {
             switch (m_score1) {
                 case 0:
-                    score = new StringBuilder("Love-All");
+                    score = new StringBuilder(scoreResults[0]).append("-").append("All");
                     break;
                 case 1:
-                    score = new StringBuilder("Fifteen-All");
+                    score = new StringBuilder(scoreResults[1]).append("-").append("All");
                     break;
                 case 2:
-                    score = new StringBuilder("Thirty-All");
+                    score = new StringBuilder(scoreResults[2]).append("-").append("All");
                     break;
                 default:
                     score = new StringBuilder("Deuce");
@@ -52,7 +53,6 @@ public class TennisGame1 {
                     score.append("-");
                     tempScore = m_score2;
                 }
-                String[] scoreResults = new String[]{"Love", "Fifteen", "Thirty", "Forty" };
                 score.append(scoreResults[tempScore]);
             }
         }
