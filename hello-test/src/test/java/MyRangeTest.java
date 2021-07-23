@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class MyRangeTest {
 
     @Test
-    @DisplayName("ข้อมูล (1,5] นั้นจะขึ้นต้นด้วย ( (exclude) ผลที่ได้คือ false")
+    @DisplayName("ข้อมูล (1,5] นั้นจะขึ้นต้นด้วย ( ผลที่ได้คือ false")
     public void startWithExclude() {
         MyRange myRange = new MyRange("(1,5]");
         boolean result = myRange.isStartWithInclude();
