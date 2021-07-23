@@ -6,6 +6,20 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MyRangeTest {
 
     @Test
+    public void endNumberWithExclude() {
+        MyRange myRange = new MyRange("[1,5)");
+        int result = myRange.getEnd();
+        assertEquals(4, result);
+    }
+
+    @Test
+    public void endNumberWithInclude() {
+        MyRange myRange = new MyRange("[1,5]");
+        int result = myRange.getEnd();
+        assertEquals(5, result);
+    }
+
+    @Test
     public void endWithExclude() {
         MyRange myRange = new MyRange("[1,5)");
         boolean result = myRange.isEndWithInclude();

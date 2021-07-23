@@ -21,4 +21,11 @@ public class MyRange {
     public boolean isEndWithInclude() {
         return this.input.endsWith("]");
     }
+
+    public int getEnd() {
+        if(isEndWithInclude()) {
+            return this.input.charAt(3) - 48;
+        }
+        return this.input.charAt(3) - 49; // TODO
+    }
 }
