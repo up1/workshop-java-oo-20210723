@@ -22,22 +22,13 @@ public class TennisGame1 {
     public String getScore() {
         String[] scoreResults = new String[]{"Love", "Fifteen", "Thirty", "Forty" };
         StringBuilder score = new StringBuilder();
-        int tempScore;
         if (m_score1 == m_score2) {
-            switch (m_score1) {
-                case 0:
-                    score = new StringBuilder(scoreResults[0]).append("-").append("All");
-                    break;
-                case 1:
-                    score = new StringBuilder(scoreResults[1]).append("-").append("All");
-                    break;
-                case 2:
-                    score = new StringBuilder(scoreResults[2]).append("-").append("All");
-                    break;
-                default:
-                    score = new StringBuilder("Deuce");
-                    break;
-
+            if( m_score1 <= 2 ) {
+                // All
+                score = new StringBuilder(scoreResults[m_score1]).append("-").append("All");
+            } else {
+                // Deuce
+                score = new StringBuilder("Deuce");
             }
         } else if (m_score1 >= 4 || m_score2 >= 4) {
             int minusResult = m_score1 - m_score2;
@@ -46,6 +37,7 @@ public class TennisGame1 {
             else if (minusResult >= 2) score = new StringBuilder("Win for ").append(this.player1Name);
             else score = new StringBuilder("Win for ").append(this.player2Name);
         } else {
+            // TODO
             score.append(scoreResults[m_score1]).append("-").append(scoreResults[m_score2]);
         }
         return score.toString();
