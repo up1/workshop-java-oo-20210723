@@ -2,13 +2,14 @@ package com.example.restapi;
 
 import org.springframework.stereotype.Component;
 
+import java.util.Random;
+
 @Component
 public class GenerateIdService {
 
-    public int counter;
-
     public String getId() {
-        return "XYZ7";
+        Random random = new Random();
+        return "XYZ" + random.nextInt(10);
     }
 
 }

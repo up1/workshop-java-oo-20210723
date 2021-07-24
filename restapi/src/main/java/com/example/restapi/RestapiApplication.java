@@ -11,12 +11,12 @@ public class RestapiApplication {
 		ConfigurableApplicationContext ctx
 				= SpringApplication.run(RestapiApplication.class, args);
 
-		GenerateIdService service = ctx.getBean(GenerateIdService.class);
-		System.out.println("====>" + service.counter);
-		service.counter ++;
-
-		GenerateIdService service2 = ctx.getBean(GenerateIdService.class);
-		System.out.println("====>" + service2.counter);
+//		GenerateIdService service = ctx.getBean(GenerateIdService.class);
+//		System.out.println("====>" + service.counter);
+//		service.counter ++;
+//
+//		GenerateIdService service2 = ctx.getBean(GenerateIdService.class);
+//		System.out.println("====>" + service2.counter);
 	}
 
 }
