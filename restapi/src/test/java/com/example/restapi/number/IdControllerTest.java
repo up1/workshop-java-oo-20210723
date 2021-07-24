@@ -30,7 +30,7 @@ public class IdControllerTest {
                 = restTemplate.getForObject("/user", UserResponse.class);
         // Assert
         assertEquals("Fake name", result.getName());
-        assertEquals("Fake  username", result.getUsername());
+        assertEquals("Fake username", result.getUsername());
     }
 
     @Test
