@@ -5,6 +5,10 @@ interface BankAccountProcess {
     public void transferMoney(BankAccount target, double amount);
 }
 
+interface InterBankAccountProcess {
+    public void transferMoney(BankAccount target, double amount);
+}
+
 class LocalBankAccount implements BankAccountProcess{
     public void transferMoney(BankAccount target, double amount) {
         // Inter
@@ -13,7 +17,7 @@ class LocalBankAccount implements BankAccountProcess{
 
 class InterBankAccount implements BankAccountProcess {
     public void transferMoney(BankAccount target, double amount) {
-        // Inter
+        throw new RuntimeException("Not supported this operation !!");
     }
 }
 
